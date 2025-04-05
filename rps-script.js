@@ -74,6 +74,7 @@ function playGame() {
         const humanSelection = getHumanChoice();
         const computerSelection = getComputerChoice();   
         let score = playRound(humanSelection, computerSelection);
+        if (!score[0] && !score[1]) {i--}
         humanScore += score[0]
         computerScore += score[1]
         console.log("Your current score is: ", humanScore)
